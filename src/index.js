@@ -4,7 +4,7 @@ import { Hono } from 'hono'
 
 const org = 'https://github.com/pixelatedlabs'
 
-const build = (repo: string) => new Hono()
+const build = (repo) => new Hono()
 	.all(`/`, c => c.redirect(`${org}/${repo}`))
 	.all(`/license`, c => c.redirect(`${org}/${repo}/blob/master/license.txt`))
 	.all(`/releases`, c => c.redirect(`${org}/${repo}/releases`))
