@@ -1,5 +1,6 @@
 # This is free and unencumbered software released into the public domain.
 
 .wrangler
-
 node_modules
+
+worker-configuration.d.ts
