@@ -22,7 +22,7 @@ const build = (repo: string) => new Hono()
 		return c.redirect(`${org}/${repo}/releases/download/${tag}/${asset}`)
 	})
 
-export default new Hono()
+export default new Hono({ strict: false })
 	.route('/dotcom', build('dotcom'))
 	.route('/duckdb', build('duckdb'))
 	.route('/headcheck', build('headcheck'))
