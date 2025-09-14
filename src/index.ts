@@ -2,23 +2,26 @@
 
 import { Hono } from 'hono'
 
-const app = new Hono()
-	.all('/headcheck', (c) => c.redirect('https://github.com/pixelatedlabs/headcheck', 307))
-	.all('/headcheck/license', (c) => c.redirect('https://github.com/pixelatedlabs/headcheck/blob/master/license.txt', 307))
-	.all('/headcheck/releases', (c) => c.redirect('https://github.com/pixelatedlabs/headcheck/releases', 307))
-	.all('/headcheck/releases/latest', (c) => c.redirect('https://github.com/pixelatedlabs/headcheck/releases/latest', 307))
-	.all('/headcheck/releases/latest/:asset', (c) => {
+const build = (repo: string) => new Hono()
+	.all(`/${repo}`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}`, 307))
+	.all(`/${repo}/license`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/blob/master/license.txt`, 307))
+	.all(`/${repo}/releases`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/releases`, 307))
+	.all(`/${repo}/releases/latest`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/latest`, 307))
+	.all(`/${repo}/releases/latest/:asset`, c => {
 		const { asset } = c.req.param()
-		return c.redirect(`https://github.com/pixelatedlabs/headcheck/releases/latest/download/${asset}`, 307)
+		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/latest/download/${asset}`, 307)
 	})
-	.all('/headcheck/releases/:tag', (c) => {
+	.all(`/${repo}/releases/:tag`, c => {
 		const { tag } = c.req.param()
-		return c.redirect(`https://github.com/pixelatedlabs/headcheck/releases/${tag}`, 307)
+		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/${tag}`, 307)
 	})
-	.all('/headcheck/releases/:tag/:asset', (c) => {
+	.all(`/${repo}/releases/:tag/:asset`, c => {
 		const { asset, tag } = c.req.param()
-		return c.redirect(`https://github.com/pixelatedlabs/headcheck/releases/download/${tag}/${asset}`, 307)
+		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/download/${tag}/${asset}`, 307)
 	})
-	.all('*', () => new Response(undefined, { status: 427 }))
+
+const app = new Hono()
+	.route('/headcheck', build('headcheck'))
+	.all('*', () => new Response(undefined, { status: 404 }))
 
 export default app
