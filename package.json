@@ -1,0 +1,15 @@
+{
+	"$schema": "https://schemastore.org/package.json",
+	"devDependencies": {
+		"typescript": "^5.9.2",
+		"wrangler": "^4.36.0"
+	},
+	"private": true,
+	"scripts": {
+		"dev": "wrangler dev",
+		"init": "wrangler types"
+	},
+	"dependencies": {
+		"hono": "^4.9.7"
+	}
+}
