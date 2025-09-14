@@ -9,15 +9,15 @@ public repositories.
 
 Each public repository has various redirect routes under the `/<repo>` path.
 
-| Route                      | Target                                                                     |
-|----------------------------|----------------------------------------------------------------------------|
-| `/`                        | `https://github.com/pixelatedlabs/<repo>`                                  |
-| `/license`                 | `https://github.com/pixelatedlabs/<repo>/blob/master/license.txt`          |
-| `/releases`                | `https://github.com/pixelatedlabs/<repo>/releases`                         |
-| `/releases/latest`         | `https://github.com/pixelatedlabs/<repo>/releases/latest`                  |
-| `/releases/latest/<asset>` | `https://github.com/pixelatedlabs/<repo>/releases/latest/download/<asset>` |
-| `/releases/<tag>`          | `https://github.com/pixelatedlabs/<repo>/releases/<tag>`                   |
-| `/releases/<tag>/<asset>`  | `https://github.com/pixelatedlabs/<repo>/releases/download/<tag><asset>`   |
+| Route                     | Target                                                                   |
+|---------------------------|--------------------------------------------------------------------------|
+| `/`                       | `https://github.com/pixelatedlabs/:repo`                                 |
+| `/license`                | `https://github.com/pixelatedlabs/:repo/blob/master/license.txt`         |
+| `/releases`               | `https://github.com/pixelatedlabs/:repo/releases`                        |
+| `/releases/latest`        | `https://github.com/pixelatedlabs/:repo/releases/latest`                 |
+| `/releases/latest/:asset` | `https://github.com/pixelatedlabs/:repo/releases/latest/download/:asset` |
+| `/releases/:tag`          | `https://github.com/pixelatedlabs/:repo/releases/:tag`                   |
+| `/releases/:tag/:asset`   | `https://github.com/pixelatedlabs/:repo/releases/download/:tag/:asset`   |
 
 # License
 
