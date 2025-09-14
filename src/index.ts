@@ -3,19 +3,19 @@
 import { Hono } from 'hono'
 
 const build = (repo: string) => new Hono()
-	.all(`/${repo}`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}`, 307))
-	.all(`/${repo}/license`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/blob/master/license.txt`, 307))
-	.all(`/${repo}/releases`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/releases`, 307))
-	.all(`/${repo}/releases/latest`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/latest`, 307))
-	.all(`/${repo}/releases/latest/:asset`, c => {
+	.all(`/`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}`, 307))
+	.all(`/license`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/blob/master/license.txt`, 307))
+	.all(`/releases`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/releases`, 307))
+	.all(`/releases/latest`, c => c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/latest`, 307))
+	.all(`/releases/latest/:asset`, c => {
 		const { asset } = c.req.param()
 		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/latest/download/${asset}`, 307)
 	})
-	.all(`/${repo}/releases/:tag`, c => {
+	.all(`/releases/:tag`, c => {
 		const { tag } = c.req.param()
 		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/${tag}`, 307)
 	})
-	.all(`/${repo}/releases/:tag/:asset`, c => {
+	.all(`/releases/:tag/:asset`, c => {
 		const { asset, tag } = c.req.param()
 		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/download/${tag}/${asset}`, 307)
 	})
