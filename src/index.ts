@@ -23,6 +23,7 @@ const build = (repo: string) => new Hono()
 	})
 
 export default new Hono()
+	.route('/dotcom', build('dotcom'))
 	.route('/duckdb', build('duckdb'))
 	.route('/headcheck', build('headcheck'))
 	.all('*', c => c.redirect(org))
