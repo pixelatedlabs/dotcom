@@ -20,8 +20,6 @@ const build = (repo: string) => new Hono()
 		return c.redirect(`https://github.com/pixelatedlabs/${repo}/releases/download/${tag}/${asset}`, 307)
 	})
 
-const app = new Hono()
+export default new Hono()
 	.route('/headcheck', build('headcheck'))
 	.all('*', () => new Response(undefined, { status: 404 }))
-
-export default app
