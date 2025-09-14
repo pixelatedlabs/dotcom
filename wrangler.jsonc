@@ -4,5 +4,10 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"compatibility_date": "2025-08-31",
 	"main": "src/index.ts",
-	"name": "dotcom",
+	"name": "pixelatedlabs",
+	"route": {
+		"custom_domain": true,
+		"pattern": "pixelatedlabs.com"
+	},
+	"workers_dev": false
 }

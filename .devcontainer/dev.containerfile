@@ -4,6 +4,6 @@ FROM quay.io/fedora/fedora:42
 
 RUN dnf --assumeyes --setopt=install_weak_deps=false install git nodejs-npm
 
-ENV WRANGLER_SEND_METRICS = false
+ENV WRANGLER_SEND_METRICS=false
 
 USER root
