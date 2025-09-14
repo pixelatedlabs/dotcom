@@ -10,6 +10,8 @@
 		}
 	},
 	"runArgs": [
+		"--network=bridge",
+		"--publish=127.0.0.1:8787:8787",
 		"--security-opt=label=disable"
 	]
 }
