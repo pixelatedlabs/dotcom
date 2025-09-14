@@ -18,7 +18,7 @@ public repositories.
 
 # Routes
 
-Each public repository has various redirect routes under the `/<repo>` path.
+Each public repository has various redirect routes under the `/:repo` path.
 
 | Route                     | Target                                                           |
 |---------------------------|------------------------------------------------------------------|
@@ -29,6 +29,9 @@ Each public repository has various redirect routes under the `/<repo>` path.
 | `/releases/latest/:asset` | `github.com/pixelatedlabs/:repo/releases/latest/download/:asset` |
 | `/releases/:tag`          | `github.com/pixelatedlabs/:repo/releases/:tag`                   |
 | `/releases/:tag/:asset`   | `github.com/pixelatedlabs/:repo/releases/download/:tag/:asset`   |
+
+For example [pixelatedlabs.com/dotcom/license](https://pixelatedlabs.com/dotcom/license) redirects
+to this repositories' license file.
 
 A redirect to `github.com/pixelatedlabs` is used as a fallback.
 
