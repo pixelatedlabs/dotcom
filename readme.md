@@ -35,3 +35,5 @@ A redirect to `github.com/pixelatedlabs` is used as a fallback.
 # License
 
 This is free and unencumbered software released into the public domain.
+
+The header image is licensed from [Floris Siegers](https://unsplash.com/photos/5L3DAEaVzO0).
