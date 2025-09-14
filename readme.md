@@ -31,7 +31,7 @@ Each public repository has various redirect routes under the `/:repo` path.
 | `/releases/:tag/:asset`   | `github.com/pixelatedlabs/:repo/releases/download/:tag/:asset`   |
 
 For example [pixelatedlabs.com/dotcom/license](https://pixelatedlabs.com/dotcom/license) redirects
-to this repositories license file.
+to this repositories' license file.
 
 A redirect to `github.com/pixelatedlabs` is used as a fallback.
 
