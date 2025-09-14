@@ -10,6 +10,7 @@
 		}
 	},
 	"runArgs": [
+		"--network=bridge",
 		"--security-opt=label=disable"
 	]
 }

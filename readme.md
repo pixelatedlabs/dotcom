@@ -1,3 +1,5 @@
+<!-- This is free and unencumbered software released into the public domain. -->
+
 <div align=center>
 	<a href=https://github.com/pixelatedlabs/headcheck/blob/master/license.txt>
 		<img alt=License src=https://img.shields.io/github/license/pixelatedlabs/headcheck?style=for-the-badge></a>
