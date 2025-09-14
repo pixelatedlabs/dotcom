@@ -1,15 +1,15 @@
 <!-- This is free and unencumbered software released into the public domain. -->
 
+![Headcheck](doc/header.webp)
+
 <div align=center>
-	<a href=https://github.com/pixelatedlabs/headcheck/blob/master/license.txt>
-		<img alt=License src=https://img.shields.io/github/license/pixelatedlabs/headcheck?style=for-the-badge></a>
+	<a href=https://github.com/pixelatedlabs/dotcom/blob/master/license.txt>
+		<img alt=License src=https://img.shields.io/github/license/pixelatedlabs/dotcom?style=for-the-badge></a>
 	&nbsp;
-	<a href=https://ziglang.org>
-		<img alt=Language src=https://img.shields.io/github/languages/top/pixelatedlabs/headcheck?style=for-the-badge></a>
+	<a href=https://github.com/pixelatedlabs/dotcom/search?l=typescript>
+		<img alt=Language src=https://img.shields.io/github/languages/top/pixelatedlabs/dotcom?style=for-the-badge></a>
 </div>
 <br>
-
-# Dotcom
 
 The Pixelated Labs website.
 
