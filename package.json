@@ -1,14 +1,13 @@
 {
 	"$schema": "https://schemastore.org/package.json",
+	"//": "This is free and unencumbered software released into the public domain",
 	"devDependencies": {
-		"typescript": "^5.9.2",
 		"wrangler": "^4.36.0"
 	},
 	"private": true,
 	"scripts": {
 		"deploy": "wrangler deploy",
-		"dev": "wrangler dev --ip 0.0.0.0",
-		"init": "wrangler types"
+		"dev": "wrangler dev --ip 0.0.0.0"
 	},
 	"dependencies": {
 		"hono": "^4.9.7"
