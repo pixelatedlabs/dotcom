@@ -4,8 +4,6 @@
 		"allowSyntheticDefaultImports": true,
 		"forceConsistentCasingInFileNames": true,
 		"isolatedModules": true,
-		"jsx": "react-jsx",
-		"jsxImportSource": "hono/jsx",
 		"lib": ["es2021"],
 		"module": "es2022",
 		"moduleResolution": "Bundler",
