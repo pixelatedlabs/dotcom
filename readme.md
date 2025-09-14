@@ -5,7 +5,7 @@ The Pixelated Labs website.
 This is implemented as a Cloudflare worker which provides redirects to the GitHub organisation and
 public repositories.
 
-# Repository Routes
+# Routes
 
 Each public repository has various redirect routes under the `/<repo>` path.
 
@@ -18,6 +18,8 @@ Each public repository has various redirect routes under the `/<repo>` path.
 | `/releases/latest/:asset` | `github.com/pixelatedlabs/:repo/releases/latest/download/:asset` |
 | `/releases/:tag`          | `github.com/pixelatedlabs/:repo/releases/:tag`                   |
 | `/releases/:tag/:asset`   | `github.com/pixelatedlabs/:repo/releases/download/:tag/:asset`   |
+
+A redirect to `github.com/pixelatedlabs` is used as a fallback.
 
 # License
 
