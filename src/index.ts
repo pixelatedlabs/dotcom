@@ -21,5 +21,6 @@ const build = (repo: string) => new Hono()
 	})
 
 export default new Hono()
+	.route('/duckdb', build('duckdb'))
 	.route('/headcheck', build('headcheck'))
 	.all('*', () => new Response(undefined, { status: 404 }))
